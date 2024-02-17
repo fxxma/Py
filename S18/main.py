@@ -1,20 +1,14 @@
-from turtle import Turtle, Screen
+import turtle as t
+import random as r
 
-timmy = Turtle()
-timmy.shape("turtle")
+tim = t.Turtle()
+opt = [tim.right,tim.left,tim]
 
-
-
-
-
-
-
-
+for _ in range(50) :
+    opt[r.randint(0,1)](90*r.randint(0,1))
+    tim.forward(10)
+    
 
 
-
-
-
-
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
