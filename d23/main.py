@@ -10,10 +10,10 @@ screen.tracer(0)
 screen.listen()
 
 player = Player()
-screen.onclick(player.move_up(),"Up")
-screen.onclick(player.move_down(),"Down")
-screen.onclick(player.move_right(),"Right")
-screen.onclick(player.move_left(),"Left")
+screen.onkey(player.move_up,"Up")
+screen.onkey(player.move_down,"Down")
+screen.onkey(player.move_right,"Right")
+screen.onkey(player.move_left,"Left")
 
 game_is_on = True
 while game_is_on:
