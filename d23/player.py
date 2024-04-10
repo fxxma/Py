@@ -11,7 +11,11 @@ class Player(Turtle):
         self.penup()
         self.color("black")
         self.shape("square")
-        self.goto(STARTING_POSITION)
+        self.starting_pos = STARTING_POSITION
+        self.setx(self.starting_pos[0])
+        self.sety(self.starting_pos[1])
+        self.left(90)
+        self.finishline =  FINISH_LINE_Y
     
     def move_up(self) :
         new_y = self.ycor() + MOVE_DISTANCE
@@ -28,3 +32,4 @@ class Player(Turtle):
     def move_left(self):
         new_x = self.xcor() - MOVE_DISTANCE
         self.goto(new_x, self.ycor())
+    
