@@ -22,14 +22,18 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+
     carmanager.add_car()
     carmanager.move_car()
-    player.forward(50)
+
+    for car in carmanager.cars :
+        if car.distance(player) < 20 : 
+            game_is_on = False
+            scoreboard.game_over()
+
     if player.ycor() > player.finishline :
         scoreboard.increase_score()
-        # player.goto(player.starting_pos)
         carmanager.reset()
-        carmanager.speed += 1
 
 
 screen.exitonclick()
