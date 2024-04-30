@@ -9,8 +9,8 @@ today = (datetime.now().month, datetime.now().day)
 df = pd.read_csv("C:\\Users\\FMA\\Documents\\Py\\birthday-wisher-hard-start\\birthdays.csv")
 df = df[(df["month"] == today[0]) & (df["day"] == today[1])]
 print(df["name"])
-# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
-# HINT: https://www.w3schools.com/python/ref_string_replace.asp
+# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual
+# name from birthdays.csv HINT: https://www.w3schools.com/python/ref_string_replace.asp
 if df.empty:
     sys.exit()
 else:
