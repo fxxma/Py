@@ -1,8 +1,8 @@
 ##################### Hard Starting Project ######################
 from datetime import datetime
-import sys
 import random
 import os
+import sys
 import pandas as pd
 
 today = (datetime.now().month, datetime.now().day)
@@ -17,6 +17,7 @@ else:
     for index, row in df.iterrows():
         n = random.randint(1, 3)
         file_path = f"letter_templates\\letter_{n}.txt"
+
         with open(file_path) as letter_file:
             contents = letter_file.read()
             contents.replace("[NAME]", row["name"])
