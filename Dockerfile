@@ -7,7 +7,7 @@ WORKDIR /app
 LABEL authors="FMA"
 
 # Copy the contents of the current directory on your host to /app in the container
-ADD main.py .
+ADD _old/main.py .
 
 # Install necessary Python packages
 RUN pip install requests beautifulsoup4
