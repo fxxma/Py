@@ -1,7 +1,8 @@
 import os
 import requests
+from dotenv import load_dotenv
 
-
+load_dotenv()
 class FlightSearch:
     # This class is responsible for talking to the Flight Search API.
     def __init__(self):
@@ -18,7 +19,7 @@ class FlightSearch:
             "Content-Type": "application/x-www-form-urlencoded"
         }
         body = {
-            "grant-type": "client_credentials",
+            "grant_type": "client_credentials",
             "client_id": os.environ["AMADEUS_KEY"],
             "client_secret": os.environ["AMADEUS_SECRET"]
         }
@@ -26,15 +27,3 @@ class FlightSearch:
 
         print(res.text)
         return res
-
-
-
-
-
-
-
-
-
-
-
-
